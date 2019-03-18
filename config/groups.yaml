@@ -43,7 +43,7 @@ indoor_temps:
     - sensor.aqara_humidity_lounge
     - sensor.pressure_158d00022cc700
     - sensor.temperature_158d00022cc700
-    - sensor.humidity_158d000245ab2f
+    - sensor.aqara_humidity_bathroom
     - sensor.pressure_158d000245ab2f
     - sensor.temperature_158d000245ab2f
 

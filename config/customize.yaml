@@ -45,15 +45,15 @@ sensor.weather_wind_speed:
   friendly_name: Wind Speed
   icon: mdi:weather-windy
 
-# Lounge temperature sensor
-sensor.humidity_158d000245ab2f:
+# Bathroom temperature sensor
+sensor.aqara_humidity_bathroom:
   friendly_name: Humidity Bathroom
 sensor.pressure_158d000245ab2f:
   friendly_name: Pressure Bathroom
 sensor.temperature_158d000245ab2f:
   friendly_name: Temperature Bathroom
 
-# Bathroom temperature sensor
+# Lounge temperature sensor
 sensor.aqara_humidity_lounge:
   friendly_name: Humidity Lounge
 sensor.pressure_158d00022cc700:
