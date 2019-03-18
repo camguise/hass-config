@@ -24,6 +24,16 @@ battery_status:
     - sensor.lounge_wall_switch_battery
     - sensor.bathroom_temp_battery
 
+synology_stats:
+  name: Trinity NAS
+  control: hidden
+  entities:
+    - sensor.volume_used_volume_1
+    - sensor.status_smart_sda
+    - sensor.status_smart_sdb
+    - sensor.status_smart_sdc
+    - sensor.status_smart_sdd
+
 external_weather:
   name: External Weather
   control: hidden
