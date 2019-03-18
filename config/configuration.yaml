@@ -80,10 +80,14 @@ binary_sensor:
     workdays: [mon, tue, wed, thu, fri]
 
 input_boolean:
-  cam_holiday:
-    name: Cam on Holiday
-    initial: off
-    icon: mdi:sleep
+  - cam_holiday:
+      name: Cam on Holiday
+      initial: off
+      icon: mdi:sleep
+  - pause_bathroom_dehumidifier:
+      name: Pause Bathroom Dehumidifier
+      initial: off
+      icon: mdi:pause-circle
 
 climate:
   - platform: smartir
@@ -102,12 +106,6 @@ climate:
     min_cycle_duration:
       minutes: 1
     initial_operation_mode: "off"
-    
-input_boolean:
-  pause_bathroom_dehumidifier:
-    name: Pause Bathroom Dehumidifier
-    initial: off
-    icon: mdi:pause-circle
 
 timer:
   pause_bathroom_dehumidifier:
