@@ -9,6 +9,7 @@ config/.HA_VERSION
 config/.ios.conf
 config/.storage/**
 config/.uuid
-config/auth/**
+config/auth*
 config/core.config_entries
 config/core.device_registry
+config/onboarding
