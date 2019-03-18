@@ -102,6 +102,16 @@ climate:
     min_cycle_duration:
       minutes: 1
     initial_operation_mode: "off"
+    
+input_boolean:
+  pause_bathroom_dehumidifier:
+    name: Pause Bathroom Dehumidifier
+    initial: off
+    icon: mdi:pause-circle
+
+timer:
+  pause_bathroom_dehumidifier:
+    duration: '00:01:00'
 
 # Plex server
 media_player:
