@@ -1,0 +1,73 @@
+# Hide unwanted items
+sun.sun:
+  hidden: true
+sensor.cams_ipad_battery_state:
+  hidden: true
+sensor.cams_iphone_battery_state:
+  hidden: true
+sensor.illumination_7811dce17ce3:
+  hidden: true
+
+# Hide unwanted Plex media players
+media_player.camsmacminiinternalcamguiseconz_airtunes_speaker:
+  hidden: true
+media_player.computer_airtunes_speaker:
+  hidden: true
+media_player.cams_iphone_2:
+  hidden: true
+media_player.cams_iphone:
+  hidden: true
+media_player.cams_ipad:
+  hidden: true
+media_player.safari:
+  hidden: true
+
+sensor.weather_precipitation:
+  friendly_name: Rainfall
+  icon: mdi:water
+
+sensor.weather_temperature:
+  friendly_name: Temperature
+
+sensor.weather_wind_direction:
+  friendly_name: Wind Direction
+  icon: mdi:sign-direction
+
+sensor.weather_wind_speed:
+  friendly_name: Wind Speed
+  icon: mdi:weather-windy
+
+# Lounge temperature sensor
+sensor.humidity_158d000245ab2f:
+  friendly_name: Humidity Bathroom
+sensor.pressure_158d000245ab2f:
+  friendly_name: Pressure Bathroom
+sensor.temperature_158d000245ab2f:
+  friendly_name: Temperature Bathroom
+
+# Bathroom temperature sensor
+sensor.humidity_158d00022cc700:
+  friendly_name: Humidity Lounge
+sensor.pressure_158d00022cc700:
+  friendly_name: Pressure Lounge
+sensor.temperature_158d00022cc700:
+  friendly_name: Temperature Lounge
+
+binary_sensor.switch_158d0001e64d90:
+  friendly_name: Aqara Button
+
+binary_sensor.wall_switch_left_158d00027c2938:
+  friendly_name: Lounge Wall Switch
+
+switch.plug_158d000243119c:
+  friendly_name: Bedroom Heater
+
+light.gateway_light_7811dce17ce3:
+  friendly_name: Hallway Light
+
+light.yeelight_lounge_central:
+  friendly_name: Lounge Central
+light.yeelight_lounge_right:
+  friendly_name: Lounge Right
+light.yeelight_lounge_left:
+  friendly_name: Lounge Left

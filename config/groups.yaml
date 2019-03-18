@@ -1,0 +1,70 @@
+Cam:
+  icon: mdi:account
+  entities:
+    - device_tracker.cams_iphone_nmap
+    - device_tracker.cams_iphone_hass
+
+Tim:
+  icon: mdi:account
+  entities:
+    - device_tracker.tims_phone_nmap
+
+People: group.Cam, group.Tim
+
+lounge_lights:
+  name: Lounge Lights
+  entities:
+    - light.yeelight_lounge_central
+    - light.yeelight_lounge_right
+    - light.yeelight_lounge_left
+
+battery_status:
+  name: Battery Status
+  entities:
+    - sensor.cams_iphone_battery_level
+    - sensor.cams_ipad_battery_level
+    - sensor.lounge_button_battery
+    - sensor.lounge_temp_battery
+    - sensor.lounge_wall_switch_battery
+    - sensor.bathroom_temp_battery
+
+external_weather:
+  name: External Weather
+  entities:
+    - sensor.weather_precipitation
+    - sensor.day_night
+    - sensor.weather_temperature
+    - sensor.weather_wind_direction
+    - sensor.weather_wind_speed
+
+indoor_temps:
+  name: Indoor Sensors
+  entities:
+    - sensor.humidity_158d00022cc700
+    - sensor.pressure_158d00022cc700
+    - sensor.temperature_158d00022cc700
+    - sensor.humidity_158d000245ab2f
+    - sensor.pressure_158d000245ab2f
+    - sensor.temperature_158d000245ab2f
+
+Environment:
+  view: yes
+  name: Environment
+  entities:
+    - climate.lounge_heat_pump
+    - group.indoor_temps
+    - group.external_weather
+
+media_scripts:
+  name: Media Scripts
+  entities:
+#    - script: script.lounge_music
+
+Media:
+  view: yes
+  name: Media
+  entities:
+    - media_player.camsmacminiinternalcamguiseconz
+    - media_player.itunes
+    - media_player.lounge_tv
+    - media_player.lounge_home_theatre

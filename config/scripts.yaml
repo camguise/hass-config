@@ -1,0 +1,112 @@
+white_night_light:
+  alias: White Nightlight
+  sequence:
+    - service: light.turn_on
+      entity_id: light.gateway_light_7811dce17ce3
+      data:
+        brightness: 100
+        rgb_color: [255, 255, 255]
+
+red_night_light:
+  alias: Red Nightlight
+  sequence:
+    - service: light.turn_on
+      entity_id: light.gateway_light_7811dce17ce3
+      data:
+        brightness: 100
+        rgb_color: [255, 0, 0]
+
+6500k_backlight:
+  alias: 6500k TV Backlight
+  sequence:
+    - service: light.turn_on
+      entity_id: light.tv_backlight
+      data:
+        brightness: "255"
+        kelvin: "6500"
+        transition: "10"
+
+warm_backlight:
+  alias: Warm TV Backlight
+  sequence:
+    - service: light.turn_on
+      entity_id: light.tv_backlight
+      data:
+        brightness: "255"
+        kelvin: "3000"
+        transition: "10"
+
+warm_lounge_lights:
+  alias: Warm Lounge Lights
+  sequence:
+    - service: light.turn_on
+      entity_id: group.lounge_lights
+      data:
+        brightness: "255"
+        kelvin: "3000"
+        transition: "10"
+
+# Play music from iTunes on the home theatre in the lounge
+lounge_music:
+  alias: Play Music in Lounge
+  sequence:
+  - service: media_player.turn_off
+    data:
+      entity_id: media_player.lounge_tv
+  - delay:
+      seconds: 5
+  - service: media_player.turn_on
+    data:
+      entity_id: media_player.lounge_home_theatre
+  - service: media_player.select_source
+    data:
+      entity_id: media_player.lounge_home_theatre
+      source: CD
+  - delay:
+      seconds: 3
+  - service: media_player.select_source
+    data:
+      entity_id: media_player.lounge_home_theatre
+      source: CD
+  - service: media_player.media_play
+    data:
+      entity_id: media_player.itunes
+  - service: logbook.log
+    data:
+      entity_id: media_player.lounge_home_theatre
+      message: started in the lounge
+      name: iTunes Music
+
+# Turn off all media devices and heating in lounge
+# Also turns on the hallway light
+# Part of bedtime routine
+turn_off_lounge:
+  alias: Turn Off Lounge
+  sequence:
+  - service: climate.set_operation_mode
+    data:
+      entity_id: climate.lounge_heat_pump
+      operation_mode: 'off'
+#  - service: media_player.media_pause
+#    data:
+#      entity_id: media_player.itunes
+  - service: media_player.turn_off
+    data:
+      entity_id: media_player.lounge_home_theatre
+  - service: media_player.turn_off
+    data:
+      entity_id: media_player.lounge_tv
+  - service: light.turn_off
+    data:
+      entity_id: light.tv_backlight
+      transition: "10"
+  - service: light.turn_off
+    data:
+      entity_id: group.lounge_lights
+      transition: "10"
+
+bedtime_routine:
+  alias: Bedtime
+  sequence:
+  - service: script.white_night_light
+  - service: script.turn_off_lounge

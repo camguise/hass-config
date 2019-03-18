@@ -1,0 +1,14 @@
+- platform: yeelight
+  devices:
+    172.16.202.103:
+      name: TV Backlight
+      transition: 1000
+    172.16.202.100:
+      name: yeelight_lounge_central
+      transition: 1000
+    172.16.202.101:
+      name: yeelight_lounge_right
+      transition: 1000
+    172.16.202.102:
+      name: yeelight_lounge_left
+      transition: 1000

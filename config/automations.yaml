@@ -1,0 +1,147 @@
+- id: '00001'
+  alias: Cam's iPhone Battery Alert
+  initial_state: false
+  trigger:
+  - below: '80'
+    entity_id: sensor.cams_iphone_battery_level
+    platform: numeric_state
+  condition: []
+  action:
+  - data:
+      message: Your iPhone battery is below 80%
+      title: Battery Low
+    service: notify.ios_cams_iphone_hass
+
+- id: '00002'
+  alias: Doorbell on single press
+  initial_state: false
+  trigger:
+    platform: event
+    event_type: xiaomi_aqara.click
+    event_data:
+      entity_id: binary_sensor.switch_158d0001e64d90
+      click_type: single
+  action:
+    service: xiaomi_aqara.play_ringtone
+    data:
+      gw_mac: 7811dce17ce3
+      ringtone_id: 10
+      ringtone_vol: 10
+
+- id: '00005'
+  alias: Toggle Lounge TV
+  trigger:
+    platform: event
+    event_type: xiaomi_aqara.click
+    event_data:
+      entity_id: binary_sensor.switch_158d0001e64d90
+      click_type: long_click_press
+  action:
+    service: media_player.toggle
+    data:
+      entity_id: media_player.lounge_tv
+
+- id: '00006'
+  alias: Bedtime
+  trigger:
+    platform: event
+    event_type: xiaomi_aqara.click
+    event_data:
+      entity_id: binary_sensor.switch_158d0001e64d90
+      click_type: double
+  action:
+    service: script.bedtime_routine
+
+# When lounge TV is turned on:
+#  - Turn on backlight to 6500k
+#  - Turn on home theatre
+#  - Set source on home theatre to DVD
+- id: '00007'
+  alias: TV Backlight On
+  trigger:
+    platform: state
+    entity_id: media_player.lounge_tv
+    to: 'on'
+  action:
+    - service: script.6500k_backlight
+    - service: media_player.turn_on
+      data:
+        entity_id: media_player.lounge_home_theatre
+    - service: media_player.select_source
+      data:
+        entity_id: media_player.lounge_home_theatre
+        source: "DVD"
+
+# When lounge TV is turned on:
+#  - Turn off backlight
+#  - Turn off home theatre
+- id: '00008'
+  alias: TV Backlight Off
+  trigger:
+    platform: state
+    entity_id: media_player.lounge_tv
+    to: 'off'
+  action:
+    - service: light.turn_off
+      entity_id: light.tv_backlight
+      data:
+        transition: "10"
+    - service: media_player.turn_off
+      data:
+        entity_id: media_player.lounge_home_theatre
+
+- id: '00009'
+  alias: Toggle Heatpump On
+  trigger:
+    platform: event
+    event_type: xiaomi_aqara.click
+    event_data:
+      entity_id: binary_sensor.wall_switch_right_158d00027c2938
+      click_type: single
+  condition:
+  - condition: state
+    entity_id: climate.lounge_heat_pump
+    state: 'off'
+  action:
+  - data:
+      entity_id: climate.lounge_heat_pump
+    service: climate.turn_on
+
+- id: '00010'
+  alias: Toggle Heatpump Off
+  trigger:
+    platform: event
+    event_type: xiaomi_aqara.click
+    event_data:
+      entity_id: binary_sensor.wall_switch_right_158d00027c2938
+      click_type: single
+  condition:
+    condition: or
+    conditions:
+      - condition: state
+        entity_id: climate.lounge_heat_pump
+        state: 'heat'
+      - condition: state
+        entity_id: climate.lounge_heat_pump
+        state: 'cool'
+      - condition: state
+        entity_id: climate.lounge_heat_pump
+        state: 'dry'
+  action:
+  - data:
+      entity_id: climate.lounge_heat_pump
+    service: climate.turn_off
+
+- id: '00011'
+  alias: Toggle Lounge Lights
+  trigger:
+    platform: event
+    event_type: xiaomi_aqara.click
+    event_data:
+      entity_id: binary_sensor.wall_switch_left_158d00027c2938
+      click_type: single
+  action:
+    service: light.toggle
+    entity_id: group.lounge_lights
+    data:
+      transition: "5"
