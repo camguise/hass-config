@@ -112,6 +112,16 @@ timer:
     name: Pause Bathroom Dehumidifier
     duration: '00:01:00'
 
+sensor:
+  - platform: synologydsm
+    host: !secret synology_host
+    username: !secret synology_user
+    password: !secret synology_pass
+    monitored_conditions:
+      - cpu_total_load
+      - memory_real_usage
+      - network_up
+
 # Plex server
 media_player:
   - platform: plex
