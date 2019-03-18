@@ -12,4 +12,6 @@ config/.uuid
 config/auth*
 config/core.config_entries
 config/core.device_registry
+config/core.entity_registry
+config/core.restore_state
 config/onboarding
