@@ -20,8 +20,8 @@ configTest=$( docker run -it --rm \
         homeassistant/home-assistant:"${HASS_VERSION}" \
         python -m homeassistant --config /config --script check_config )
 
-validConfig="Testing configuration at /config
-"
+validConfig='^[[01mTesting configuration at /config^[[0m^M
+^[[0m'
 
 if [[ "${configTest}" == "${validConfig}" ]]; then
 	echo "Configuration is Valid"
