@@ -26,6 +26,7 @@ configTestPrintable=$(echo "${configTest}" | tr -cd "[:print:]\n")
 
 if [[ "${configTestPrintable}" == "${validConfig}" ]]; then
 	echo "Configuration is Valid"
+	docker-compose restart
 else
 	echo "${configTest}"
 fi
