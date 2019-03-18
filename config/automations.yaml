@@ -162,7 +162,7 @@
         entity_id: binary_sensor.workday_sensor
         state: 'on'
       - condition: state
-        entity_id: binary_sensor.cam_holiday
+        entity_id: input_boolean.cam_holiday
         state: 'off'
   action:
     service: climate.turn_on
@@ -172,7 +172,7 @@
   alias: Bathroom Timer Start
   trigger:
     platform: state
-    entity_id: binary_sensor.pause_bathroom_dehumidifier
+    entity_id: input_boolean.pause_bathroom_dehumidifier
     to: 'on'
   action:
     #- service: switch.turn_off
