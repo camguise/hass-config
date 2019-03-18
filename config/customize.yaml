@@ -15,6 +15,8 @@ binary_sensor.aqara_wall_switch_lounge_both:
   hidden: true
 binary_sensor.aqara_button_lounge:
   hidden: true
+switch.aqara_plug_bedroom_heater:
+  hidden: true
 
 # Hide unwanted Plex media players
 media_player.camsmacminiinternalcamguiseconz_airtunes_speaker:
@@ -60,9 +62,6 @@ sensor.aqara_pressure_lounge:
   friendly_name: Pressure Lounge
 sensor.aqara_temperature_lounge:
   friendly_name: Temperature Lounge
-
-switch.aqara_plug_bedroom_heater:
-  friendly_name: Bedroom Heater
 
 light.aqara_gateway_light_hallway:
   friendly_name: Hallway Light
