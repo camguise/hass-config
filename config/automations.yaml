@@ -175,8 +175,8 @@
     entity_id: input_boolean.pause_bathroom_dehumidifier
     to: 'on'
   action:
-    #- service: switch.turn_off
-#      entity_id: switch.aqara_plug_bedroom_heater
+    - service: switch.turn_off
+      entity_id: switch.aqara_plug_bedroom_heater
     - service: timer.start
       entity_id: timer.pause_bathroom_dehumidifier
     - service: logbook.log
@@ -195,6 +195,8 @@
   action:
     - service: input_boolean.turn_off
       entity_id: input_boolean.pause_bathroom_dehumidifier
+    - service: switch.turn_no
+      entity_id: switch.aqara_plug_bedroom_heater
     - service: logbook.log
       data:
         entity_id: timer.pause_bathroom_dehumidifier
