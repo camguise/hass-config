@@ -77,7 +77,7 @@ climate:
     unique_id: lounge_heat_pump
     device_code: 1024
     controller_send_service: !secret lounge_broadlink_send_packet
-    temperature_sensor: sensor.temperature_158d00022cc700
+    temperature_sensor: sensor.aqara_temperature_lounge
     humidity_sensor: sensor.aqara_humidity_lounge
   - platform: generic_thermostat
     name: Bedroom Heater
