@@ -70,6 +70,7 @@ cloud:
 
 sensor: !include sensors.yaml
 light: !include lights.yaml
+person: !include person.yaml
 
 climate:
   - platform: smartir

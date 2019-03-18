@@ -1,0 +1,11 @@
+- name: Campbell
+  id: cam
+  user_id: !secret user_id_cam
+  device_trackers:
+    - device_tracker.cams_iphone_hass
+    - device_tracker.cams_iphone_nmap
+- name: Tim
+  id: tim
+  user_id: !secret user_id_tim
+  device_trackers:
+    - device_tracker.tims_phone_nmap
