@@ -56,7 +56,7 @@ sensor.temperature_158d000245ab2f:
 # Lounge temperature sensor
 sensor.aqara_humidity_lounge:
   friendly_name: Humidity Lounge
-sensor.pressure_158d00022cc700:
+sensor.aqara_pressure_lounge:
   friendly_name: Pressure Lounge
 sensor.temperature_158d00022cc700:
   friendly_name: Temperature Lounge

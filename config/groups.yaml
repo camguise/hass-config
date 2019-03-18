@@ -41,7 +41,7 @@ indoor_temps:
   name: Indoor Sensors
   entities:
     - sensor.aqara_humidity_lounge
-    - sensor.pressure_158d00022cc700
+    - sensor.aqara_pressure_lounge
     - sensor.temperature_158d00022cc700
     - sensor.aqara_humidity_bathroom
     - sensor.pressure_158d000245ab2f
