@@ -145,19 +145,17 @@
     entity_id: group.lounge_lights
     data:
       transition: "5"
-      
+
+# Turns on the bedroom heater only if person.cam is at home
 - id: 'bedroom_heater_morning'
-  alias: Turn on bedroom heater in the morning
+  alias: Bedroom heater in the morning
   trigger:
     platform: time
-    at: '17:12:00'
+    at: '17:15:00'
   condition:
     condition: state
     entity_id: person.cam
     state: 'home'
-    # optional: trigger only if state was this for last X time.
-    for:
-      hours: 1
   action:
     service: climate.turn_on
     entity_id: climate.bedroom_heater
