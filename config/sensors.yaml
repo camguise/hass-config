@@ -8,13 +8,6 @@
     - windSpeed
     - windDirection
 
-# Workday sensor to determine if the current day is a workday
-binary_sensor:
-  - platform: workday
-    country: NZ
-    province: OTA
-    workdays: [mon, tue, wed, thu, fri]
-
 # Custom day/night icon
 - platform: template
   sensors:

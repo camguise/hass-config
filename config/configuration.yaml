@@ -72,6 +72,13 @@ sensor: !include sensors.yaml
 light: !include lights.yaml
 person: !include person.yaml
 
+# Workday sensor to determine if the current day is a workday
+binary_sensor:
+  - platform: workday
+    country: NZ
+    province: OTA
+    workdays: [mon, tue, wed, thu, fri]
+
 climate:
   - platform: smartir
     name: Lounge Heat Pump
