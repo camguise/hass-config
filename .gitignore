@@ -1,2 +1,5 @@
 .DS_Store
 secrets.yaml
+*.log
+*.db
+**/__pycache__/
