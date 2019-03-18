@@ -55,6 +55,14 @@ indoor_temps:
     - sensor.aqara_pressure_bathroom
     - sensor.aqara_temperature_bathroom
 
+bathroom_dehumidifier:
+  name: Bathroom Dehumidifier
+  control: hidden
+  entities:
+    - input_boolean.pause_bathroom_dehumidifier
+    - timer.pause_bathroom_dehumidifier
+    - input_number.bathroom_dehumidifier_target_humidity
+
 Environment:
   view: yes
   name: Environment
