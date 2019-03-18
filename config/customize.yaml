@@ -13,6 +13,8 @@ binary_sensor.aqara_wall_switch_lounge_right:
   hidden: true
 binary_sensor.aqara_wall_switch_lounge_both:
   hidden: true
+binary_sensor.aqara_button_lounge:
+  hidden: true
 
 # Hide unwanted Plex media players
 media_player.camsmacminiinternalcamguiseconz_airtunes_speaker:
@@ -58,12 +60,6 @@ sensor.pressure_158d00022cc700:
   friendly_name: Pressure Lounge
 sensor.temperature_158d00022cc700:
   friendly_name: Temperature Lounge
-
-binary_sensor.aqara_button_lounge:
-  friendly_name: Aqara Button Lounge
-
-binary_sensor.aqara_wall_switch_lounge_left:
-  friendly_name: Lounge Wall Switch
 
 switch.plug_158d000243119c:
   friendly_name: Bedroom Heater
