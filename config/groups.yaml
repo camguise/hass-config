@@ -1,15 +1,20 @@
-Cam:
-  icon: mdi:account
+#Cam:
+#  icon: mdi:account
+#  entities:
+#    - device_tracker.cams_iphone_nmap
+#    - device_tracker.cams_iphone_hass
+#
+#Tim:
+#  icon: mdi:account
+#  entities:
+#    - device_tracker.tims_phone_nmap
+#
+#People: group.Cam, group.Tim
+people:
+  name: People
   entities:
-    - device_tracker.cams_iphone_nmap
-    - device_tracker.cams_iphone_hass
-
-Tim:
-  icon: mdi:account
-  entities:
-    - device_tracker.tims_phone_nmap
-
-People: group.Cam, group.Tim
+    - person.campbell
+    - person.tim
 
 lounge_lights:
   name: Lounge Lights
