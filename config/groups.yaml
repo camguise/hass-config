@@ -70,8 +70,10 @@ Environment:
   name: Environment
   entities:
     - climate.lounge_heat_pump
+    - climate.bedroom_heater
     - group.indoor_temps
     - group.external_weather
+    - group.bathroom_dehumidifier
 
 media_scripts:
   name: Media Scripts
