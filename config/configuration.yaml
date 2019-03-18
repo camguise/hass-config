@@ -82,7 +82,7 @@ climate:
   - platform: generic_thermostat
     name: Bedroom Heater
     heater: switch.plug_158d000243119c
-    target_sensor: sensor.temperature_158d000245ab2f
+    target_sensor: sensor.aqara_temperature_bathroom
     min_temp: 16
     max_temp: 30
     min_cycle_duration:

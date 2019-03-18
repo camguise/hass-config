@@ -45,7 +45,7 @@ indoor_temps:
     - sensor.aqara_temperature_lounge
     - sensor.aqara_humidity_bathroom
     - sensor.aqara_pressure_bathroom
-    - sensor.temperature_158d000245ab2f
+    - sensor.aqara_temperature_bathroom
 
 Environment:
   view: yes

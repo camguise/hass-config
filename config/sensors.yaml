@@ -44,8 +44,8 @@
 - platform: template
   sensors:
     bathroom_temp_battery:
-      entity_id: sensor.temperature_158d000245ab2f
-      value_template: "{{ states.sensor.temperature_158d000245ab2f.attributes.battery_level }}"
+      entity_id: sensor.aqara_temperature_bathroom
+      value_template: "{{ states.sensor.aqara_temperature_bathroom.attributes.battery_level }}"
       friendly_name: 'Bathroom Temerature Battery'
       device_class: battery
       unit_of_measurement: "%"
