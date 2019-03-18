@@ -14,6 +14,7 @@ lounge_lights:
 
 battery_status:
   name: Battery Status
+  control: hidden
   entities:
     - sensor.cams_iphone_battery_level
     - sensor.cams_ipad_battery_level
@@ -24,6 +25,7 @@ battery_status:
 
 external_weather:
   name: External Weather
+  control: hidden
   entities:
     - sensor.weather_precipitation
     - sensor.day_night
@@ -33,6 +35,7 @@ external_weather:
 
 indoor_temps:
   name: Indoor Sensors
+  control: hidden
   entities:
     - sensor.aqara_humidity_lounge
     - sensor.aqara_pressure_lounge
