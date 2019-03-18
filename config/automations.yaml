@@ -152,9 +152,9 @@
   trigger:
     platform: time
     at: '6:15:00'
- condition:
-   condition: state
-   entity_id: person.campbell
+  condition:
+    condition: state
+    entity_id: person.campbell
     state: 'home'
   action:
     service: climate.turn_on
