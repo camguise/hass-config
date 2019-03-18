@@ -3,6 +3,7 @@ people:
   control: hidden
   entities:
     - person.campbell
+    - input_boolean.cam_holiday
     - person.tim
 
 lounge_lights:
