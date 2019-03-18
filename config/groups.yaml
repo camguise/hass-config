@@ -44,7 +44,7 @@ indoor_temps:
     - sensor.aqara_pressure_lounge
     - sensor.temperature_158d00022cc700
     - sensor.aqara_humidity_bathroom
-    - sensor.pressure_158d000245ab2f
+    - sensor.aqara_pressure_bathroom
     - sensor.temperature_158d000245ab2f
 
 Environment:

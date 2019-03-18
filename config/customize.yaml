@@ -48,7 +48,7 @@ sensor.weather_wind_speed:
 # Bathroom temperature sensor
 sensor.aqara_humidity_bathroom:
   friendly_name: Humidity Bathroom
-sensor.pressure_158d000245ab2f:
+sensor.aqara_pressure_bathroom:
   friendly_name: Pressure Bathroom
 sensor.temperature_158d000245ab2f:
   friendly_name: Temperature Bathroom
