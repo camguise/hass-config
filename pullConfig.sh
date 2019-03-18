@@ -18,13 +18,13 @@ configTest=$( docker run -it --rm \
         -v /etc/localtime:/etc/localtime:ro \
         -v "${LETSENCRYPT_DIR}":/etc/letsencrypt:ro \
         homeassistant/home-assistant:"${HASS_VERSION}" \
-        python -m homeassistant --config /config --script check_config \
-        | tr -cd "[:print:]\n")
+        python -m homeassistant --config /config --script check_config )
 
 validConfig='[01mTesting configuration at /config[0m
 [0m'
+configTestPrintable=$(echo "${configTest}" | tr -cd "[:print:]\n")
 
-if [[ "${configTest}" == "${validConfig}" ]]; then
+if [[ "${configTestPrintable}" == "${validConfig}" ]]; then
 	echo "Configuration is Valid"
 else
 	echo "${configTest}"
