@@ -29,10 +29,10 @@ synology_stats:
   control: hidden
   entities:
     - sensor.volume_used_volume_1
-    - sensor.status_smart_sda
-    - sensor.status_smart_sdb
-    - sensor.status_smart_sdc
-    - sensor.status_smart_sdd
+    - sensor.status_sda
+    - sensor.status_sdb
+    - sensor.status_sdc
+    - sensor.status_sdd
 
 external_weather:
   name: External Weather

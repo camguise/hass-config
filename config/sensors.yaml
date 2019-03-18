@@ -28,7 +28,6 @@
   username: !secret synology_user
   password: !secret synology_pass
   monitored_conditions:
-    - disk_smart_status
     - disk_status
     - volume_percentage_used
 
