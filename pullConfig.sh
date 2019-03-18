@@ -4,6 +4,9 @@ HASS_VERSION='0.89.1'
 HASS_DIR='/usr/local/docker/hass'
 LETSENCRYPT_DIR='/usr/local/docker/letsencrypt/config/etc/letsencrypt'
 
+GREEN='\033[0;36m'
+NC='\033[0m' # No Color
+
 # make sure we're running as root
 if (( `/usr/bin/id -u` != 0 )); then { echo "Sorry, must be root.  Exiting..."; exit; } fi
 
@@ -25,7 +28,7 @@ validConfig='[01mTesting configuration at /config[0m
 configTestPrintable=$(echo "${configTest}" | tr -cd "[:print:]\n")
 
 if [[ "${configTestPrintable}" == "${validConfig}" ]]; then
-	echo "Configuration is Valid"
+	echo -e "${GREEN}Configuration is Valid${NC}"
 	docker-compose restart
 else
 	echo "${configTest}"
