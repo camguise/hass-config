@@ -168,12 +168,44 @@
     service: climate.turn_on
     entity_id: climate.bedroom_heater
 
+- id: 'bathroom_dehumidifier_off'
+  alias: Turn off bathroom Dehumidifier
+  trigger:
+    platform: state
+    entity_id: input_boolean.bathroom_dehumidifier_status
+    to: 'off'
+  action:
+    - service: timer.cancel
+      entity_id: timer.pause_bathroom_dehumidifier
+    - service: input_boolean.turn_off
+      entity_id: input_boolean.pause_bathroom_dehumidifier
+    - service: switch.turn_off
+      entity_id: switch.aqara_plug_bedroom_heater
+
+- id: 'bathroom_dehumidifier_on'
+  alias: Turn off bathroom Dehumidifier
+  trigger:
+    platform: state
+    entity_id: input_boolean.bathroom_dehumidifier_status
+    to: 'on'
+  action:
+    - service: timer.cancel
+      entity_id: timer.pause_bathroom_dehumidifier
+    - service: input_boolean.turn_off
+      entity_id: input_boolean.pause_bathroom_dehumidifier
+    - service: switch.turn_on
+      entity_id: switch.aqara_plug_bedroom_heater
+
 - id: 'bathroom_timer_start'
   alias: Bathroom Timer Start
   trigger:
     platform: state
     entity_id: input_boolean.pause_bathroom_dehumidifier
     to: 'on'
+  condition:
+    condition: state
+    entity_id: input_boolean.bathroom_dehumidifier_status
+    state: 'on'
   action:
     - service: switch.turn_off
       entity_id: switch.aqara_plug_bedroom_heater
