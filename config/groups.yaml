@@ -60,6 +60,7 @@ bathroom_dehumidifier:
   control: hidden
   entities:
     - input_boolean.bathroom_dehumidifier_status
+    - sensor.aqara_humidity_bathroom
     - input_number.bathroom_dehumidifier_target_humidity
     - input_boolean.pause_bathroom_dehumidifier
     - timer.pause_bathroom_dehumidifier
