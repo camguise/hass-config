@@ -13,9 +13,15 @@ git pull
 
 chown -R root:docker "${HASS_DIR}"
 
-docker run -it --rm \
+configTest=$( docker run -it --rm \
         -v "${HASS_DIR}/config":/config:ro \
         -v /etc/localtime:/etc/localtime:ro \
         -v "${LETSENCRYPT_DIR}":/etc/letsencrypt:ro \
         homeassistant/home-assistant:"${HASS_VERSION}" \
-        python -m homeassistant --config /config --script check_config
+        python -m homeassistant --config /config --script check_config )
+        
+if [[ "${configTest}" == "Testing configuration at /config" ]]; then
+	echo "Configuration is Valid"
+else
+	echo "${configTest}"
+fi
