@@ -19,8 +19,11 @@ configTest=$( docker run -it --rm \
         -v "${LETSENCRYPT_DIR}":/etc/letsencrypt:ro \
         homeassistant/home-assistant:"${HASS_VERSION}" \
         python -m homeassistant --config /config --script check_config )
-        
-if [[ "${configTest}" == "Testing configuration at /config" ]]; then
+
+validConfig="Testing configuration at /config
+"
+
+if [[ "${configTest}" == "${validConfig}" ]]; then
 	echo "Configuration is Valid"
 else
 	echo "${configTest}"
