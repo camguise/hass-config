@@ -54,7 +54,7 @@ sensor.temperature_158d000245ab2f:
   friendly_name: Temperature Bathroom
 
 # Bathroom temperature sensor
-sensor.humidity_158d00022cc700:
+sensor.aqara_humidity_lounge:
   friendly_name: Humidity Lounge
 sensor.pressure_158d00022cc700:
   friendly_name: Pressure Lounge

@@ -40,7 +40,7 @@ external_weather:
 indoor_temps:
   name: Indoor Sensors
   entities:
-    - sensor.humidity_158d00022cc700
+    - sensor.aqara_humidity_lounge
     - sensor.pressure_158d00022cc700
     - sensor.temperature_158d00022cc700
     - sensor.humidity_158d000245ab2f
