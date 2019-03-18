@@ -1,5 +1,6 @@
 people:
   name: People
+  show_header_toggle: false
   entities:
     - person.campbell
     - person.tim
