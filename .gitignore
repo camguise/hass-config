@@ -1,5 +1,6 @@
 .DS_Store
-secrets.yaml
 *.log
 *.db
 **/__pycache__/
+known_devices.yaml
+secrets.yaml
