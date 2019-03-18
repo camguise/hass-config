@@ -5,7 +5,7 @@ sensor.cams_ipad_battery_state:
   hidden: true
 sensor.cams_iphone_battery_state:
   hidden: true
-sensor.illumination_7811dce17ce3:
+sensor.aqara_illumination_hallway:
   hidden: true
 binary_sensor.aqara_wall_switch_lounge_left:
   hidden: true
