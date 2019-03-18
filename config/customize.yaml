@@ -61,7 +61,7 @@ sensor.aqara_pressure_lounge:
 sensor.aqara_temperature_lounge:
   friendly_name: Temperature Lounge
 
-switch.plug_158d000243119c:
+switch.aqara_plug_bedroom_heater:
   friendly_name: Bedroom Heater
 
 light.aqara_gateway_light_hallway:
