@@ -53,8 +53,8 @@ sensor.pressure_158d00022cc700:
 sensor.temperature_158d00022cc700:
   friendly_name: Temperature Lounge
 
-binary_sensor.switch_158d0001e64d90:
-  friendly_name: Aqara Button
+binary_sensor.aqara_button_lounge:
+  friendly_name: Aqara Button Lounge
 
 binary_sensor.wall_switch_left_158d00027c2938:
   friendly_name: Lounge Wall Switch
