@@ -15,7 +15,6 @@ homeassistant:
 
 # Load custom components
 smartir:
-test_component:
 
 # Enables the frontend
 frontend:
