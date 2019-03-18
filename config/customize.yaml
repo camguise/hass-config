@@ -7,6 +7,12 @@ sensor.cams_iphone_battery_state:
   hidden: true
 sensor.illumination_7811dce17ce3:
   hidden: true
+binary_sensor.aqara_wall_switch_lounge_left:
+  hidden: true
+binary_sensor.aqara_wall_switch_lounge_right:
+  hidden: true
+binary_sensor.aqara_wall_switch_lounge_both:
+  hidden: true
 
 # Hide unwanted Plex media players
 media_player.camsmacminiinternalcamguiseconz_airtunes_speaker:
@@ -56,7 +62,7 @@ sensor.temperature_158d00022cc700:
 binary_sensor.aqara_button_lounge:
   friendly_name: Aqara Button Lounge
 
-binary_sensor.wall_switch_left_158d00027c2938:
+binary_sensor.aqara_wall_switch_lounge_left:
   friendly_name: Lounge Wall Switch
 
 switch.plug_158d000243119c:

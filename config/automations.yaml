@@ -96,7 +96,7 @@
     platform: event
     event_type: xiaomi_aqara.click
     event_data:
-      entity_id: binary_sensor.wall_switch_right_158d00027c2938
+      entity_id: binary_sensor.aqara_wall_switch_lounge_right
       click_type: single
   condition:
   - condition: state
@@ -113,7 +113,7 @@
     platform: event
     event_type: xiaomi_aqara.click
     event_data:
-      entity_id: binary_sensor.wall_switch_right_158d00027c2938
+      entity_id: binary_sensor.aqara_wall_switch_lounge_right
       click_type: single
   condition:
     condition: or
@@ -138,7 +138,7 @@
     platform: event
     event_type: xiaomi_aqara.click
     event_data:
-      entity_id: binary_sensor.wall_switch_left_158d00027c2938
+      entity_id: binary_sensor.aqara_wall_switch_lounge_left
       click_type: single
   action:
     service: light.toggle
