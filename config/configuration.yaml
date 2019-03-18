@@ -83,7 +83,7 @@ input_boolean:
   cam_holiday:
     name: Cam on Holiday
     initial: off
-    icon: mdi:alarm-off
+    icon: mdi:sleep
 
 climate:
   - platform: smartir
