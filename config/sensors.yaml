@@ -24,7 +24,6 @@
   command: "/config/bin-external/ssl-cert-check/ssl-cert-check -b -c /etc/letsencrypt/live/dunedin.cam.guise.co.nz/cert.pem | awk '{ print $NF }'"
 
 - platform: synologydsm
-  name: Trinity NAS
   host: !secret synology_host
   username: !secret synology_user
   password: !secret synology_pass
