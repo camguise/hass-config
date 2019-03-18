@@ -153,9 +153,14 @@
     platform: time
     at: '6:15:00'
   condition:
-    condition: state
-    entity_id: person.campbell
-    state: 'home'
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: person.campbell
+        state: 'home'
+      - condition: state
+        entity_id: binary_sensor.workday_sensor
+        state: 'on'
   action:
     service: climate.turn_on
     entity_id: climate.bedroom_heater
