@@ -88,6 +88,10 @@ input_boolean:
     name: Pause Bathroom Dehumidifier
     initial: off
     icon: mdi:pause-circle
+  bathroom_dehumidifier_status:
+    name: Dehumidifier Power
+    initial: off
+    icon: mdi:power
 
 input_number:
   bathroom_dehumidifier_target_humidity:

@@ -59,9 +59,10 @@ bathroom_dehumidifier:
   name: Bathroom Dehumidifier
   control: hidden
   entities:
+    - input_boolean.bathroom_dehumidifier_status
+    - input_number.bathroom_dehumidifier_target_humidity
     - input_boolean.pause_bathroom_dehumidifier
     - timer.pause_bathroom_dehumidifier
-    - input_number.bathroom_dehumidifier_target_humidity
 
 Environment:
   view: yes
