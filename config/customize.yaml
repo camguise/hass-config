@@ -38,6 +38,18 @@ media_player.cams_ipad:
 media_player.safari:
   hidden: true
 
+# Synology NAS Stats
+sensor.volume_used_volume_1:
+  friendly_name: 'Volume 1'
+sensor.status_smart_sda:
+  friendly_name: 'Disk 1 SMART'
+sensor.status_smart_sdb:
+  friendly_name: 'Disk 2 SMART'
+sensor.status_smart_sdc:
+  friendly_name: 'Disk 3 SMART'
+sensor.status_smart_sdd:
+  friendly_name: 'Disk 4 SMART'
+
 sensor.weather_precipitation:
   friendly_name: Rainfall
   icon: mdi:water
