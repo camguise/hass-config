@@ -151,11 +151,11 @@
   alias: Bedroom heater in the morning
   trigger:
     platform: time
-    at: '17:19:00'
-#  condition:
-#    condition: state
-#    entity_id: person.cam
-#    state: 'home'
+    at: '6:15:00'
+ condition:
+   condition: state
+   entity_id: person.campbell
+    state: 'home'
   action:
     service: climate.turn_on
     entity_id: climate.bedroom_heater
