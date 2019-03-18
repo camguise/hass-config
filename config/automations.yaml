@@ -212,6 +212,20 @@
     - service: timer.start
       entity_id: timer.pause_bathroom_dehumidifier
 
+- id: 'bathroom_timer_start_failure'
+  alias: Bathroom Timer Start
+  trigger:
+    platform: state
+    entity_id: input_boolean.pause_bathroom_dehumidifier
+    to: 'on'
+  condition:
+    condition: state
+    entity_id: input_boolean.bathroom_dehumidifier_status
+    state: 'off'
+  action:
+    - service: input_boolean.turn_off
+      entity_id: input_boolean.pause_bathroom_dehumidifier
+
 - id: 'bathroom_timer_stop'
   alias: Bathroom Timer Stop
   trigger:
