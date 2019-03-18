@@ -28,9 +28,8 @@
   username: !secret synology_user
   password: !secret synology_pass
   monitored_conditions:
-    - cpu_total_load
-    - memory_real_usage
-    - network_up
+    - disk_smart_status
+    - volume_percentage_used
 
 - platform: template
   sensors:
