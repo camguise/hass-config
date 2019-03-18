@@ -179,11 +179,6 @@
       entity_id: switch.aqara_plug_bedroom_heater
     - service: timer.start
       entity_id: timer.pause_bathroom_dehumidifier
-    - service: logbook.log
-      data:
-        entity_id: timer.pause_bathroom_dehumidifier
-        message: has been paused
-        name: Bathroom Dehumidifier
 
 - id: 'bathroom_timer_stop'
   alias: Bathroom Timer Stop
@@ -195,10 +190,5 @@
   action:
     - service: input_boolean.turn_off
       entity_id: input_boolean.pause_bathroom_dehumidifier
-    - service: switch.turn_no
+    - service: switch.turn_on
       entity_id: switch.aqara_plug_bedroom_heater
-    - service: logbook.log
-      data:
-        entity_id: timer.pause_bathroom_dehumidifier
-        message: has been started
-        name: Bathroom Dehumidifier
