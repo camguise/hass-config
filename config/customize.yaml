@@ -64,7 +64,7 @@ sensor.temperature_158d00022cc700:
 switch.plug_158d000243119c:
   friendly_name: Bedroom Heater
 
-light.gateway_light_7811dce17ce3:
+light.aqara_gateway_light_hallway:
   friendly_name: Hallway Light
 
 light.yeelight_lounge_central:

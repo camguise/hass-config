@@ -2,7 +2,7 @@ white_night_light:
   alias: White Nightlight
   sequence:
     - service: light.turn_on
-      entity_id: light.gateway_light_7811dce17ce3
+      entity_id: light.aqara_gateway_light_hallway
       data:
         brightness: 100
         rgb_color: [255, 255, 255]
@@ -11,7 +11,7 @@ red_night_light:
   alias: Red Nightlight
   sequence:
     - service: light.turn_on
-      entity_id: light.gateway_light_7811dce17ce3
+      entity_id: light.aqara_gateway_light_hallway
       data:
         brightness: 100
         rgb_color: [255, 0, 0]
