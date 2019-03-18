@@ -79,6 +79,12 @@ binary_sensor:
     province: OTA
     workdays: [mon, tue, wed, thu, fri]
 
+input_boolean:
+  cam_holiday:
+    name: Cam on Holiday
+    initial: off
+    icon: mdi:domain-off
+
 climate:
   - platform: smartir
     name: Lounge Heat Pump
