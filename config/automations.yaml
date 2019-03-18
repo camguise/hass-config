@@ -196,6 +196,11 @@
     - service: switch.turn_on
       entity_id: switch.aqara_plug_bedroom_heater
 
+#- id: 'bathroom_humitidty_above_target'
+#  alias: Bathroom Humidity Above Target
+#  trigger:
+#    numeric_state: 
+
 - id: 'bathroom_timer_start'
   alias: Bathroom Timer Start
   trigger:
