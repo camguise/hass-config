@@ -1,6 +1,6 @@
 people:
   name: People
-  show_header_toggle: false
+  control: hidden
   entities:
     - person.campbell
     - person.tim
