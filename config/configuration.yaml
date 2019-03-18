@@ -95,6 +95,7 @@ input_boolean:
 
 input_number:
   bathroom_dehumidifier_target_humidity:
+    name: ''
     min: 30.0
     max: 80.0
     initial: 45.0
