@@ -236,7 +236,7 @@
       entity_id: timer.pause_bathroom_dehumidifier
 
 - id: 'bathroom_timer_start_failure'
-  alias: Bathroom Timer Start
+  alias: Bathroom Timer Start Failure
   trigger:
     platform: state
     entity_id: input_boolean.pause_bathroom_dehumidifier
