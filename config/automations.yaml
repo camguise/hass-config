@@ -192,12 +192,16 @@
     - service: switch.turn_off
       entity_id: switch.aqara_plug_bedroom_heater
 
-- id: 'bathroom_dehumidifier_on'
-  alias: Turn on bathroom Dehumidifier
+- id: 'bathroom_dehumidifier_on_above_target'
+  alias: Turn on bathroom dehumidifier when humidity is above target
   trigger:
     platform: state
     entity_id: input_boolean.bathroom_dehumidifier_status
     to: 'on'
+  condition:
+    condition: state
+    entity_id: binary_sensor.bathroom_humidity_above_target
+    state: 'on'
   action:
     - service: timer.cancel
       entity_id: timer.pause_bathroom_dehumidifier
@@ -205,6 +209,22 @@
       entity_id: input_boolean.pause_bathroom_dehumidifier
     - service: switch.turn_on
       entity_id: switch.aqara_plug_bedroom_heater
+
+- id: 'bathroom_dehumidifier_on_below_target'
+  alias: Turn on bathroom dehumidifier when humidity is below target
+  trigger:
+    platform: state
+    entity_id: input_boolean.bathroom_dehumidifier_status
+    to: 'on'
+  condition:
+    condition: state
+    entity_id: binary_sensor.bathroom_humidity_above_target
+    state: 'off'
+  action:
+    - service: timer.cancel
+      entity_id: timer.pause_bathroom_dehumidifier
+    - service: input_boolean.turn_off
+      entity_id: input_boolean.pause_bathroom_dehumidifier
 
 - id: 'bathroom_humitidty_above_target'
   alias: Bathroom Humidity Above Target
@@ -222,11 +242,24 @@
         entity_id: input_boolean.pause_bathroom_dehumidifier
         state: 'off'
   action:
-    service: logbook.log
-    data:
-      entity_id: group.bathroom_dehumidifier
-      message: running
-      name: Bathroom Dehumidifier 
+    service: switch.turn_on
+    entity_id: switch.aqara_plug_bedroom_heater
+
+- id: 'bathroom_humitidty_below_target'
+  alias: Bathroom Humidity Below Target
+  trigger:
+    platform: state
+    entity_id: binary_sensor.bathroom_humidity_above_target
+    to: 'off'
+  condition:
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: input_boolean.bathroom_dehumidifier_status
+        state: 'on'
+  action:
+    service: switch.turn_off
+    entity_id: switch.aqara_plug_bedroom_heater
 
 - id: 'bathroom_timer_start'
   alias: Bathroom Timer Start
@@ -258,15 +291,36 @@
     - service: input_boolean.turn_off
       entity_id: input_boolean.pause_bathroom_dehumidifier
 
-- id: 'bathroom_timer_stop'
-  alias: Bathroom Timer Stop
+- id: 'bathroom_timer_stop_above_target'
+  alias: Bathroom Timer Stop Above Target
   trigger:
     platform: event
     event_type: timer.finished
     event_data:
       entity_id: timer.pause_bathroom_dehumidifier
+  condition:
+    condition: state
+    entity_id: binary_sensor.bathroom_humidity_above_target
+    state: 'on'
   action:
     - service: input_boolean.turn_off
       entity_id: input_boolean.pause_bathroom_dehumidifier
     - service: switch.turn_on
+      entity_id: switch.aqara_plug_bedroom_heater
+      
+- id: 'bathroom_timer_stop_below_target'
+  alias: Bathroom Timer Stop Below Target
+  trigger:
+    platform: event
+    event_type: timer.finished
+    event_data:
+      entity_id: timer.pause_bathroom_dehumidifier
+  condition:
+    condition: state
+    entity_id: binary_sensor.bathroom_humidity_above_target
+    state: 'off'
+  action:
+    - service: input_boolean.turn_off
+      entity_id: input_boolean.pause_bathroom_dehumidifier
+    - service: switch.turn_off
       entity_id: switch.aqara_plug_bedroom_heater
