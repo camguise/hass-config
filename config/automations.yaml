@@ -206,10 +206,18 @@
     - service: switch.turn_on
       entity_id: switch.aqara_plug_bedroom_heater
 
-#- id: 'bathroom_humitidty_above_target'
-#  alias: Bathroom Humidity Above Target
-#  trigger:
-#    numeric_state: 
+- id: 'bathroom_humitidty_above_target'
+  alias: Bathroom Humidity Above Target
+  trigger:
+    platform: numeric_state
+    entity_id: sensor.aqara_humidity_bathroom
+    above: "{{ states('input_number.bathroom_dehumidifier_target_humidity') | int }}"
+  action:
+    service: logbook.log
+    data:
+      entity_id: group.bathroom_dehumidifier
+      message: above target
+      name: Humidity 
 
 - id: 'bathroom_timer_start'
   alias: Bathroom Timer Start
