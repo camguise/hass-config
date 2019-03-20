@@ -147,8 +147,8 @@
       transition: "5"
 
 # Turns on the bedroom heater only if person.cam is at home
-- id: 'bedroom_heater_morning'
-  alias: Bedroom heater in the morning
+- id: 'bedroom_heater_morning_on'
+  alias: Bedroom heater on in the morning
   trigger:
     platform: time
     at: '6:15:00'
@@ -166,6 +166,16 @@
         state: 'off'
   action:
     service: climate.turn_on
+    entity_id: climate.bedroom_heater
+
+# Turns off the bedroom heater at specified time
+- id: 'bedroom_heater_morning_off'
+  alias: Bedroom heater off in the morning
+  trigger:
+    platform: time
+    at: '7:30:00'
+  action:
+    service: climate.turn_off
     entity_id: climate.bedroom_heater
 
 - id: 'bathroom_dehumidifier_off'
