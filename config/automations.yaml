@@ -291,6 +291,16 @@
     - service: input_boolean.turn_off
       entity_id: input_boolean.pause_bathroom_dehumidifier
 
+- id: 'bathroom_timer_unpause'
+  alias: Bathroom Timer Unpause
+  trigger:
+    platform: state
+    entity_id: input_boolean.pause_bathroom_dehumidifier
+    to: 'off'
+  action:
+    service: timer.finish
+    entity_id: timer.pause_bathroom_dehumidifier
+
 - id: 'bathroom_timer_stop_above_target'
   alias: Bathroom Timer Stop Above Target
   trigger:
