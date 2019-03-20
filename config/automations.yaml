@@ -209,9 +209,9 @@
 - id: 'bathroom_humitidty_above_target'
   alias: Bathroom Humidity Above Target
   trigger:
-    platform: numeric_state
-    entity_id: sensor.aqara_humidity_bathroom
-    above: 50.0
+    platform: state
+    entity_id: binary_sensor.bathroom_humidity_above_target
+    to: 'on'
   action:
     service: logbook.log
     data:
