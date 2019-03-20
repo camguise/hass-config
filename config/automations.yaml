@@ -211,7 +211,7 @@
   trigger:
     platform: numeric_state
     entity_id: sensor.aqara_humidity_bathroom
-    above: "{{ states('input_number.bathroom_dehumidifier_target_humidity') | float }}"
+    above: 50.0
   action:
     service: logbook.log
     data:
