@@ -23,6 +23,8 @@ device_tracker.cams_iphone_nmap:
   hidden: true
 device_tracker.tims_phone_nmap:
   hidden: true
+binary_sensor.bathroom_humidity_above_target:
+  hidden: true
 
 # Hide unwanted Plex media players
 media_player.camsmacminiinternalcamguiseconz_airtunes_speaker:
