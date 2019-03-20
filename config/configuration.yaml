@@ -81,7 +81,7 @@ binary_sensor:
   - platform: template
     sensors:
       bathroom_humidity_above_target:
-        value_template: "{{ states('sensor.aqara_humidity_bathroom')|float > states('sensor.bathroom_dehumidifier_target_humidity')|float }}"
+        value_template: "{{ states('sensor.aqara_humidity_bathroom')|float > states('input_number.bathroom_dehumidifier_target_humidity')|float }}"
 
 input_boolean:
   cam_holiday:
