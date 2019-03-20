@@ -213,9 +213,14 @@
     entity_id: binary_sensor.bathroom_humidity_above_target
     to: 'on'
   condition:
-    condition: state
-    entity_id: input_boolean.bathroom_dehumidifier_status
-    state: 'on'
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: input_boolean.bathroom_dehumidifier_status
+        state: 'on'
+      - condition: state
+        entity_id: input_boolean.pause_bathroom_dehumidifier
+        state: 'on'
   action:
     service: logbook.log
     data:
