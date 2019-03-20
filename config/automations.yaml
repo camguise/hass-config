@@ -193,7 +193,7 @@
       entity_id: switch.aqara_plug_bedroom_heater
 
 - id: 'bathroom_dehumidifier_on'
-  alias: Turn off bathroom Dehumidifier
+  alias: Turn on bathroom Dehumidifier
   trigger:
     platform: state
     entity_id: input_boolean.bathroom_dehumidifier_status
