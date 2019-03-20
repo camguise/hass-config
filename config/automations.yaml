@@ -220,7 +220,7 @@
         state: 'on'
       - condition: state
         entity_id: input_boolean.pause_bathroom_dehumidifier
-        state: 'on'
+        state: 'off'
   action:
     service: logbook.log
     data:
