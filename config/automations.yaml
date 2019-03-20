@@ -212,12 +212,17 @@
     platform: state
     entity_id: binary_sensor.bathroom_humidity_above_target
     to: 'on'
+  condition: and
+  conditions:
+    - condition: state
+      entity_id: input_boolean.bathroom_dehumidifier_status
+      state: 'on'
   action:
     service: logbook.log
     data:
       entity_id: group.bathroom_dehumidifier
-      message: above target
-      name: Humidity 
+      message: running
+      name: Bathroom Dehumidifier 
 
 - id: 'bathroom_timer_start'
   alias: Bathroom Timer Start
