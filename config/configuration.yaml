@@ -129,7 +129,7 @@ climate:
 timer:
   pause_bathroom_dehumidifier:
     name: Dehumidifier Sleep Timer
-    duration: '00:01:00'
+    duration: '00:10:00'
 
 # Plex server
 media_player:
