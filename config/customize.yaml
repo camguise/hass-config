@@ -92,3 +92,5 @@ light.yeelight_lounge_right:
   friendly_name: Lounge Right
 light.yeelight_lounge_left:
   friendly_name: Lounge Left
+light.yeelight_entryway:
+  friendly_name: Entryway
