@@ -69,7 +69,17 @@ views:
           
   - title: Environment
     path: environment
-    cards: []
+    cards:
+      - type: entities
+        title: External Weather
+        show_header_toggle: false
+        entities:
+          - sensor.weather_precipitation
+          - sensor.day_night
+          - sensor.weather_temperature
+          - sensor.weather_wind_direction
+          - sensor.weather_wind_speed
+    
   - title: Media
     path: media
     cards: []
