@@ -87,7 +87,7 @@ views:
       - type: thermostat
         entity: climate.lounge_heat_pump
         
-      - type: entity_button
+      - type: entity-button
         entity: switch.aqara_plug_bedroom_heater
         name: Cam Bedroom Heater
     
