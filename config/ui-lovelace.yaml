@@ -21,6 +21,17 @@ views:
           - light.yeelight_lounge_right
           - light.yeelight_lounge_left
           
+      - type: entities
+        title: Battery Status
+        show_header_toggle: false
+        entities:
+          - sensor.cams_iphone_battery_level
+          - sensor.cams_ipad_battery_level
+          - sensor.lounge_button_battery
+          - sensor.lounge_temp_battery
+          - sensor.lounge_wall_switch_battery
+          - sensor.bathroom_temp_battery
+          
   - title: Environment
     path: environment
     cards: []
