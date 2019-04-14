@@ -81,6 +81,19 @@ views:
           - sensor.aqara_humidity_bathroom
           - sensor.aqara_pressure_bathroom
           - sensor.aqara_temperature_bathroom
+      
+      - type: thermostat
+        entity: climate.lounge_heat_pump
+    
+      - type: entities
+        title: Bathroom Dehumidifier
+        show_header_toggle: false
+        entities:
+          - input_boolean.bathroom_dehumidifier_status
+          - sensor.aqara_humidity_bathroom
+          - input_number.bathroom_dehumidifier_target_humidity
+          - input_boolean.pause_bathroom_dehumidifier
+          - timer.pause_bathroom_dehumidifier
     
       - type: entities
         title: External Weather
