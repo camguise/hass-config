@@ -47,7 +47,7 @@ views:
         state_filter:
           - "on"
         card:
-          type: entity
+          type: entities
           title: Lights currently on
           show_header_toggle: true
           
