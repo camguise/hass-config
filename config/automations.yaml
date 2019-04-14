@@ -152,7 +152,7 @@
 #  - the cam_holiday toggle has not been set
 - id: 'bedroom_heater_morning_on'
   alias: Bedroom heater on in the morning
-  initial_state: false
+  initial_state: true
   trigger:
     platform: time
     at: '6:15:00'
@@ -175,7 +175,7 @@
 # Turns off the bedroom heater at specified time
 - id: 'bedroom_heater_morning_off'
   alias: Bedroom heater off in the morning
-  initial_state: false
+  initial_state: true
   trigger:
     platform: time
     at: '7:30:00'
