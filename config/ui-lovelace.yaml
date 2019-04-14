@@ -37,6 +37,15 @@ views:
   - title: Lighting
     path: lighting
     cards:
+    
+      - type: entity-filter
+        entities:
+          - light.yeelight_lounge_central
+          - light.yeelight_lounge_right
+          - light.yeelight_lounge_left
+          - light.yeelight_entryway
+        state_filter:
+          - "on"
           
       - type: entities
         title: Lounge Lights
