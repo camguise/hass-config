@@ -94,6 +94,8 @@ views:
           - input_number.bathroom_dehumidifier_target_humidity
           - input_boolean.pause_bathroom_dehumidifier
           - timer.pause_bathroom_dehumidifier
+          - entity: switch.aqara_plug_bathroom_dehumidifier
+            name: Bathroom Plug
     
       - type: entities
         title: External Weather
