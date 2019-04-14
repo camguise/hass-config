@@ -90,7 +90,6 @@ binary_sensor:
 input_boolean:
   cam_holiday:
     name: Cam on Holiday
-    initial: off
     icon: mdi:sleep
   pause_bathroom_dehumidifier:
     name: Pause Bathroom Dehumidifier
@@ -98,7 +97,6 @@ input_boolean:
     icon: mdi:pause-circle
   bathroom_dehumidifier_status:
     name: Dehumidifier Power
-    initial: off
     icon: mdi:power
 
 input_number:
