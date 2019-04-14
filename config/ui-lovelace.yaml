@@ -32,6 +32,16 @@ views:
           - sensor.lounge_wall_switch_battery
           - sensor.bathroom_temp_battery
           
+      - type: entities
+        title: Trinity NAS
+        show_header_toggle: false
+        entities:
+         - sensor.volume_used_volume_1
+         - sensor.status_sda
+         - sensor.status_sdb
+         - sensor.status_sdc
+         - sensor.status_sdd
+            
   - title: Environment
     path: environment
     cards: []
