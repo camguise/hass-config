@@ -92,3 +92,8 @@ light.yeelight_lounge_left:
   friendly_name: Lounge Left
 light.yeelight_entryway:
   friendly_name: Entryway
+
+switch.aqara_plug_bathroom_dehumidifier:
+  friendly_name: Bathroom Plug
+switch.aqara_plug_bedroom_heater:
+  friendly_name: Bedroom Heater Plug
