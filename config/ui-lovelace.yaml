@@ -86,6 +86,10 @@ views:
       
       - type: thermostat
         entity: climate.lounge_heat_pump
+        
+      - type: entity_button
+        entity: switch.aqara_plug_bedroom_heater
+        name: Cam Bedroom Heater
     
       - type: entities
         title: Bathroom Dehumidifier
