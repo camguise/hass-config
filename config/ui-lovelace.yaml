@@ -40,7 +40,10 @@ views:
     
       - type: entity-filter
         entities:
-          - group.all_lights
+          - light.yeelight_lounge_central
+          - light.yeelight_lounge_right
+          - light.yeelight_lounge_left
+          - light.yeelight_entryway
         state_filter:
           - "on"
         card:
