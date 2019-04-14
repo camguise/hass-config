@@ -45,6 +45,7 @@ views:
           - light.yeelight_lounge_left
           - light.yeelight_entryway
           - light.aqara_gateway_light_hallway
+          - light.tv_backlight
         state_filter:
           - "on"
         card:
@@ -66,6 +67,7 @@ views:
         entities:
           - light.yeelight_entryway
           - light.aqara_gateway_light_hallway
+          - light.tv_backlight
           
   - title: Environment
     path: environment
