@@ -72,6 +72,10 @@ tts:
 # Cloud
 cloud:
 
+weather:
+  - platform: darksky
+    api_key: ee62a592a33913d9200f319ee4905140
+
 sensor: !include sensors.yaml
 light: !include lights.yaml
 person: !include person.yaml

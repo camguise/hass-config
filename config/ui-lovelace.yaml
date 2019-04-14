@@ -109,6 +109,10 @@ views:
           - sensor.weather_wind_direction
           - sensor.weather_wind_speed
       
+      - type: weather-forcast
+        name: Weather Forcast
+        entity: weather.dark_sky
+      
       - type: history-graph
         title: Indoor Temperatures
         entities:
