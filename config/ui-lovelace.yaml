@@ -70,6 +70,18 @@ views:
   - title: Environment
     path: environment
     cards:
+    
+      - type: entities
+        title: Indoor Sensors
+        show_header_toggle: false
+        entities:
+          - sensor.aqara_humidity_lounge
+          - sensor.aqara_pressure_lounge
+          - sensor.aqara_temperature_lounge
+          - sensor.aqara_humidity_bathroom
+          - sensor.aqara_pressure_bathroom
+          - sensor.aqara_temperature_bathroom
+    
       - type: entities
         title: External Weather
         show_header_toggle: false
