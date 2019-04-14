@@ -1,10 +1,12 @@
-title: My Awesome Home
+title: Home Assistant
 views:
-    # View tab title.
-  - title: Example
+  - title: Home
+    path: home
     cards:
         # The markdown card will render markdown text.
-      - type: markdown
-        title: Lovelace
-        content: >
-          Welcome to your **Lovelace UI**.
+      - type: entities
+        title: People
+        show_header_toggle: false
+        entities:
+          - person.campbell
+          - person.tim
