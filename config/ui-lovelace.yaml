@@ -12,3 +12,9 @@ views:
           - input_boolean.cam_holiday
           - type: divider
           - person.tim
+  - title: Environment
+    path: environment
+    cards: []
+  - title: Media
+    path: media
+    cards: []
