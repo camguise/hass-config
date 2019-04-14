@@ -109,8 +109,7 @@ views:
           - sensor.weather_wind_direction
           - sensor.weather_wind_speed
       
-      - type: weather-forcast
-        name: Weather Forcast
+      - type: weather-forecast
         entity: weather.dark_sky
       
       - type: history-graph
