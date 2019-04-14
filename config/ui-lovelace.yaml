@@ -109,7 +109,7 @@ views:
           - sensor.weather_wind_direction
           - sensor.weather_wind_speed
       
-      - type: histry-graph
+      - type: history-graph
         title: Indoor Temperatures
         entities:
           - sensor.aqara_temperature_bathroom
