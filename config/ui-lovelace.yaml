@@ -14,14 +14,6 @@ views:
           - person.tim
           
       - type: entities
-        title: Lounge Lights
-        show_header_toggle: true
-        entities:
-          - light.yeelight_lounge_central
-          - light.yeelight_lounge_right
-          - light.yeelight_lounge_left
-          
-      - type: entities
         title: Battery Status
         show_header_toggle: false
         entities:
@@ -41,7 +33,19 @@ views:
          - sensor.status_sdb
          - sensor.status_sdc
          - sensor.status_sdd
-            
+         
+  - title: Lighting
+    path: lighting
+    cards:
+          
+      - type: entities
+        title: Lounge Lights
+        show_header_toggle: true
+        entities:
+          - light.yeelight_lounge_central
+          - light.yeelight_lounge_right
+          - light.yeelight_lounge_left
+          
   - title: Environment
     path: environment
     cards: []
