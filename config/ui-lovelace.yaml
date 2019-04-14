@@ -3,7 +3,7 @@ views:
   - title: Home
     path: home
     cards:
-        # The markdown card will render markdown text.
+    
       - type: entities
         title: People
         show_header_toggle: false
@@ -12,6 +12,15 @@ views:
           - input_boolean.cam_holiday
           - type: divider
           - person.tim
+          
+      - type: entities
+        title: Lounge Lights
+        show_header_toggle: true
+        entities:
+          - light.yeelight_lounge_central
+          - light.yeelight_lounge_right
+          - light.yeelight_lounge_left
+          
   - title: Environment
     path: environment
     cards: []
