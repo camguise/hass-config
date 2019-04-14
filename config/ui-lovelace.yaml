@@ -90,6 +90,10 @@ views:
       - type: entity-button
         entity: switch.aqara_plug_bedroom_heater
         name: Cam Bedroom Heater
+        tap_action:
+          action: toggle
+        hold_action:
+          action: more-info
     
       - type: entities
         title: Bathroom Dehumidifier
