@@ -146,7 +146,10 @@
     data:
       transition: "5"
 
-# Turns on the bedroom heater only if person.cam is at home
+# Turns on the bedroom heater only if:
+#  - person.campbell is at home
+#  - it is a work day
+#  - the cam_holiday toggle has not been set
 - id: 'bedroom_heater_morning_on'
   alias: Bedroom heater on in the morning
   initial_state: false
@@ -166,8 +169,8 @@
         entity_id: input_boolean.cam_holiday
         state: 'off'
   action:
-    service: climate.turn_on
-    entity_id: climate.bedroom_heater
+    service: switch.turn_on
+    entity_id: switch.aqara_plug_bedroom_heater
 
 # Turns off the bedroom heater at specified time
 - id: 'bedroom_heater_morning_off'
@@ -177,8 +180,8 @@
     platform: time
     at: '7:30:00'
   action:
-    service: climate.turn_off
-    entity_id: climate.bedroom_heater
+    service: switch.turn_off
+    entity_id: switch.aqara_plug_bedroom_heater
 
 - id: 'bathroom_dehumidifier_off'
   alias: Turn off bathroom Dehumidifier
