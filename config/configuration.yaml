@@ -75,6 +75,7 @@ cloud:
 weather:
   - platform: darksky
     api_key: !secret darksky_api_key
+    mode: daily
 
 sensor: !include sensors.yaml
 light: !include lights.yaml
