@@ -15,8 +15,6 @@ binary_sensor.aqara_wall_switch_lounge_both:
   hidden: true
 binary_sensor.aqara_button_lounge:
   hidden: true
-#switch.aqara_plug_bedroom_heater:
-#  hidden: true
 device_tracker.cams_iphone_hass:
   hidden: true
 device_tracker.cams_iphone_nmap:

@@ -192,7 +192,7 @@
     - service: input_boolean.turn_off
       entity_id: input_boolean.pause_bathroom_dehumidifier
     - service: switch.turn_off
-      entity_id: switch.aqara_plug_bedroom_heater
+      entity_id: switch.aqara_plug_bathroom_dehumidifier
 
 - id: 'bathroom_dehumidifier_on_above_target'
   alias: Turn on bathroom dehumidifier when humidity is above target
@@ -210,7 +210,7 @@
     - service: input_boolean.turn_off
       entity_id: input_boolean.pause_bathroom_dehumidifier
     - service: switch.turn_on
-      entity_id: switch.aqara_plug_bedroom_heater
+      entity_id: switch.aqara_plug_bathroom_dehumidifier
 
 - id: 'bathroom_dehumidifier_on_below_target'
   alias: Turn on bathroom dehumidifier when humidity is below target
@@ -245,7 +245,7 @@
         state: 'off'
   action:
     service: switch.turn_on
-    entity_id: switch.aqara_plug_bedroom_heater
+    entity_id: switch.aqara_plug_bathroom_dehumidifier
 
 - id: 'bathroom_humitidty_below_target'
   alias: Bathroom Humidity Below Target
@@ -261,7 +261,7 @@
         state: 'on'
   action:
     service: switch.turn_off
-    entity_id: switch.aqara_plug_bedroom_heater
+    entity_id: switch.aqara_plug_bathroom_dehumidifier
 
 - id: 'bathroom_timer_start'
   alias: Bathroom Timer Start
@@ -275,7 +275,7 @@
     state: 'on'
   action:
     - service: switch.turn_off
-      entity_id: switch.aqara_plug_bedroom_heater
+      entity_id: switch.aqara_plug_bathroom_dehumidifier
     - service: timer.start
       entity_id: timer.pause_bathroom_dehumidifier
 
@@ -318,7 +318,7 @@
     - service: input_boolean.turn_off
       entity_id: input_boolean.pause_bathroom_dehumidifier
     - service: switch.turn_on
-      entity_id: switch.aqara_plug_bedroom_heater
+      entity_id: switch.aqara_plug_bathroom_dehumidifier
       
 - id: 'bathroom_timer_stop_below_target'
   alias: Bathroom Timer Stop Below Target
@@ -335,4 +335,4 @@
     - service: input_boolean.turn_off
       entity_id: input_boolean.pause_bathroom_dehumidifier
     - service: switch.turn_off
-      entity_id: switch.aqara_plug_bedroom_heater
+      entity_id: switch.aqara_plug_bathroom_dehumidifier
