@@ -122,15 +122,6 @@ climate:
     controller_send_service: !secret lounge_broadlink_send_packet
     temperature_sensor: sensor.aqara_temperature_lounge
     humidity_sensor: sensor.aqara_humidity_lounge
-  - platform: generic_thermostat
-    name: Bedroom Heater
-    heater: switch.aqara_plug_bedroom_heater
-    target_sensor: sensor.aqara_temperature_bathroom
-    min_temp: 16
-    max_temp: 30
-    min_cycle_duration:
-      minutes: 1
-    initial_operation_mode: "off"
 
 timer:
   pause_bathroom_dehumidifier:
