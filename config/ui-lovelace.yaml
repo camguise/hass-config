@@ -58,6 +58,13 @@ views:
           - light.yeelight_lounge_central
           - light.yeelight_lounge_right
           - light.yeelight_lounge_left
+      
+      - type: entities
+        title: Other Lights
+        show_header_toggle: true
+        entities:
+          - light.yeelight_entryway
+          - light.aqara_gateway_light_hallway
           
   - title: Environment
     path: environment
