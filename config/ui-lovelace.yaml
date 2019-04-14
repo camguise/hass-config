@@ -46,6 +46,10 @@ views:
           - light.yeelight_entryway
         state_filter:
           - "on"
+        card:
+          type: entity
+          title: Lights currently on
+          show_header_toggle: true
           
       - type: entities
         title: Lounge Lights
