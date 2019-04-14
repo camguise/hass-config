@@ -112,8 +112,10 @@ views:
       - type: history-graph
         title: Indoor Temperatures
         entities:
-          - sensor.aqara_temperature_bathroom
-          - sensor.aqara_temperature_lounge
+          - entity: sensor.aqara_temperature_bathroom
+            name: Bathroom
+          - entity: sensor.aqara_temperature_lounge
+            name: Lounge
     
   - title: Media
     path: media
