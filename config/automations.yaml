@@ -343,9 +343,12 @@
 - id: 'turn_on_entryway_light_when home'
   alias: Turn on Entryway Light When Home
   trigger:
-    platform: state
-    entity_id: person.campbell
-    to: "home"
+    - platform: state
+      entity_id: person.campbell
+      to: "home"
+    - platform: state
+      entity_id: person.tim
+      to: "home"
   condition:
     condition: state
     entity_id: sensor.day_night
