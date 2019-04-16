@@ -34,7 +34,7 @@ views:
          - sensor.status_sdc
          - sensor.status_sdd
          
-         - type: entity-filter
+      - type: entity-filter
         entities:
           - light.yeelight_lounge_central
           - light.yeelight_lounge_right
