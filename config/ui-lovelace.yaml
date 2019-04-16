@@ -34,24 +34,23 @@ views:
          - sensor.status_sdc
          - sensor.status_sdd
          
-  - title: Lighting
-    path: lighting
-    cards:
-    
-      - type: entity-filter
+         - type: entity-filter
         entities:
           - light.yeelight_lounge_central
           - light.yeelight_lounge_right
           - light.yeelight_lounge_left
           - light.yeelight_entryway
           - light.aqara_gateway_light_hallway
-          - light.tv_backlight
         state_filter:
           - "on"
         card:
           type: entities
           title: Lights Currently On
           show_header_toggle: true
+         
+  - title: Lighting
+    path: lighting
+    cards:      
           
       - type: entities
         title: Lounge Lights
