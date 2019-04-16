@@ -133,6 +133,6 @@ views:
       - type: media-control
         entity: media_player.camsmacminiinternalcamguiseconz
       - type: media-control
-        entity: media_player.lounge_home_theatre
-      - type: media-control
         entity: media_player.lounge_tv
+      - type: media-control
+        entity: media_player.lounge_home_theatre
