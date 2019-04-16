@@ -339,3 +339,17 @@
       entity_id: input_boolean.pause_bathroom_dehumidifier
     - service: switch.turn_off
       entity_id: switch.aqara_plug_bathroom_dehumidifier
+
+- id: 'turn_on_entryway_light_when home'
+  alias: Turn on Entryway Light When Home
+  trigger:
+    platform: state
+    entity_id: person.campbell
+    to: "home"
+  condition:
+    condition: state
+    entity_id: sensor.day_night
+    state: "Night"
+  action:
+    - service: light.turn_on
+      entity_id: light.yeelight_entryway
