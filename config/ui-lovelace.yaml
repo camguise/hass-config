@@ -23,6 +23,7 @@ views:
           - sensor.lounge_temp_battery
           - sensor.lounge_wall_switch_battery
           - sensor.bathroom_temp_battery
+          - sensor.hallway_wall_switch_battery
           
       - type: entities
         title: Trinity NAS
