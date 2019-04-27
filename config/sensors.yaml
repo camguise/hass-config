@@ -66,3 +66,12 @@
       friendly_name: 'Lounge Wall Switch Battery'
       device_class: battery
       unit_of_measurement: "%"
+
+- platform: template
+  sensors:
+    hallway_wall_switch_battery:
+      entity_id: binary_sensor.aqara_wall_switch_hall_left
+      value_template: "{{ states.binary_sensor.aqara_wall_switch_hall_left.attributes.battery_level }}"
+      friendly_name: 'Hallway Wall Switch Battery'
+      device_class: battery
+      unit_of_measurement: "%"
