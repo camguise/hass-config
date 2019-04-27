@@ -146,6 +146,34 @@
     data:
       transition: "5"
 
+- id: 'hall_switch_left_entryway_lights'
+  alias: Toggle Entryway Light Left
+  trigger:
+    platform: event
+    event_type: xiaomi_aqara.click
+    event_data:
+      entity_id: binary_sensor.aqara_wall_switch_hall_left
+      click_type: single
+  action:
+    service: light.toggle
+    entity_id: light.yeelight_entryway
+    data:
+      transition: "5"
+
+- id: 'hall_switch_right_entryway_lights'
+  alias: Toggle Entryway Light Right
+  trigger:
+    platform: event
+    event_type: xiaomi_aqara.click
+    event_data:
+      entity_id: binary_sensor.aqara_wall_switch_hall_right
+      click_type: single
+  action:
+    service: light.toggle
+    entity_id: light.yeelight_entryway
+    data:
+      transition: "5"
+
 # Turns on the bedroom heater only if:
 #  - person.campbell is at home
 #  - it is a work day
