@@ -388,7 +388,7 @@
 - id: 'lounge_media_stoped'
   alias: "Lounge Media Stopped"
   trigger:
-    - platform:
+    - platform: state
       entity_id: media_player.camsmacminiinternalcamguiseconz
       from: 'playing'
       to: 'idle'
@@ -403,7 +403,7 @@
 - id: 'lounge_media_playing'
   alias: "Lounge Media Playing"
   trigger:
-    - platform:
+    - platform: state
       entity_id: media_player.camsmacminiinternalcamguiseconz
       from: 'idle'
       to: 'playing'
