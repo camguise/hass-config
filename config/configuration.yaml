@@ -80,6 +80,7 @@ weather:
 sensor: !include sensors.yaml
 light: !include lights.yaml
 person: !include person.yaml
+scene: !include scenes.yaml
 
 # Workday sensor to determine if the current day is a workday
 binary_sensor:

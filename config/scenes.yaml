@@ -1,0 +1,7 @@
+- name: Lounge normal
+  entities:
+    light.yeelight_lounge_central:
+      state: on
+      transition: "10"
+      brightness: "255"
+      kelvin: "3000"
