@@ -1,4 +1,4 @@
-- name: Lounge normal
+- name: Lounge Normal
   entities:
     light.yeelight_lounge_central:
       state: on
