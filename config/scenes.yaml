@@ -1,22 +1,22 @@
-- name: Lounge Normal
+- name: Lounge Fade In
   entities:
     light.yeelight_lounge_central:
       state: on
-      transition: "5"
+      transition: "10"
       brightness: "255"
       kelvin: "3000"
     light.yeelight_lounge_left:
       state: on
-      transition: "5"
+      transition: "10"
       brightness: "255"
       kelvin: "3000"
     light.yeelight_lounge_right:
       state: on
-      transition: "5"
+      transition: "10"
       brightness: "255"
       kelvin: "3000"
 
-- name: Lounge Dark
+- name: Lounge Fade Out
   entities:
     light.yeelight_lounge_central:
       state: off
