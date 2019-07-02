@@ -384,3 +384,18 @@
   action:
     - service: light.turn_on
       entity_id: light.yeelight_entryway
+
+- id: 'lounge_media_stoped'
+  alias: "Lounge Media Stopped"
+  trigger:
+    - platform:
+      entity_id: media_player.camsmacminiinternalcamguiseconz
+      from: 'playing'
+      to: 'idle'
+  condition:
+    - condition: state
+      entity_id: sun.sun
+      state: 'below_horizon'
+  action:
+    service: scene.turn_on
+    entity_id: scene.lounge_fade_in
