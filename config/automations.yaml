@@ -399,3 +399,14 @@
   action:
     service: scene.turn_on
     entity_id: scene.lounge_fade_in
+
+- id: 'lounge_media_playing'
+  alias: "Lounge Media Playing"
+  trigger:
+    - platform:
+      entity_id: media_player.camsmacminiinternalcamguiseconz
+      from: 'idle'
+      to: 'playing'
+  action:
+    service: scene.turn_on
+    entity_id: scene.lounge_fade_out
