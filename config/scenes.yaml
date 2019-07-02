@@ -15,3 +15,15 @@
       transition: "10"
       brightness: "255"
       kelvin: "3000"
+
+- name: Lounge Dark
+  entities:
+    light.yeelight_lounge_central:
+      state: off
+      transition: "10"
+    light.yeelight_lounge_left:
+      state: off
+      transition: "10"
+    light.yeelight_lounge_right:
+      state: off
+      transition: "10"
