@@ -1,6 +1,6 @@
 #!/bin/bash
 
-HASS_VERSION='0.89.1'
+HASS_VERSION='0.95.4'
 HASS_DIR='/usr/local/docker/hass'
 LETSENCRYPT_DIR='/usr/local/docker/letsencrypt/config/etc/letsencrypt'
 
