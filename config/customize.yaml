@@ -39,8 +39,8 @@ media_player.safari:
   hidden: true
 
 # Synology NAS Stats
-sensor.synology_dsm_volume_used_volume_1:
-  friendly_name: 'Volume 1'
+#sensor.synology_dsm_volume_used_volume_1:
+#  friendly_name: 'Volume 1'
 sensor.synology_dsm_status_sda:
   friendly_name: 'Disk 1'
 sensor.synology_dsm_status_sdb:
