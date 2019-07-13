@@ -2,7 +2,7 @@ version: '3'
 services:
   homeassistant:
     container_name: home-assistant
-    image: homeassistant/home-assistant:0.89.1
+    image: homeassistant/home-assistant:0.95.4
     volumes:
       - /usr/local/docker/hass/config:/config
       - /etc/localtime:/etc/localtime:ro
