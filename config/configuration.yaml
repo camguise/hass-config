@@ -118,7 +118,6 @@ climate:
     unique_id: lounge_heat_pump
     device_code: 1024
     controller_data: !secret broadlink_lounge_host
-    controller_send_service: !secret lounge_broadlink_send_packet
     temperature_sensor: sensor.aqara_temperature_lounge
     humidity_sensor: sensor.aqara_humidity_lounge
 
