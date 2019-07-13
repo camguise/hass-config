@@ -96,7 +96,7 @@ binary_sensor:
 input_boolean:
   cam_holiday:
     name: Cam on Holiday
-    icon: 'mdi:mdi:sleep'
+    icon: mdi:sleep
   pause_bathroom_dehumidifier:
     name: Pause Bathroom Dehumidifier
     initial: off
