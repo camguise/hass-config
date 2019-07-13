@@ -134,12 +134,12 @@ media_player:
     name: Lounge TV
     unique_id: lounge_tv
     device_code: 2000
-    controller_send_service: !secret lounge_broadlink_send_packet
+    controller_data: !secret broadlink_lounge_host
   - platform: smartir
     name: Lounge Home Theatre
     unique_id: lounge_home_theatre
     device_code: 2010
-    controller_send_service: !secret lounge_broadlink_send_packet
+    controller_data: !secret broadlink_lounge_host
 
 device_tracker:
   - platform: nmap_tracker
