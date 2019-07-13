@@ -29,11 +29,11 @@ views:
         title: Trinity NAS
         show_header_toggle: false
         entities:
-         - sensor.volume_used_volume_1
-         - sensor.status_sda
-         - sensor.status_sdb
-         - sensor.status_sdc
-         - sensor.status_sdd
+         - sensor.synology_dsm_volume_used_volume_1
+         - sensor.synology_dsm_status_sda
+         - sensor.synology_dsm_status_sdb
+         - sensor.synology_dsm_status_sdc
+         - sensor.synology_dsm_status_sdd
          
       - type: entity-filter
         entities:
