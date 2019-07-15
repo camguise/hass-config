@@ -97,4 +97,4 @@ switch.aqara_plug_bathroom_dehumidifier:
   friendly_name: Bathroom Plug
 switch.aqara_plug_bedroom_heater:
   friendly_name: Bedroom Heater Plug
-  icon: mdi:flash
+  icon: mdi:radiator
