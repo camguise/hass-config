@@ -83,13 +83,9 @@ lounge_music:
 turn_off_lounge:
   alias: Turn Off Lounge
   sequence:
-  - service: climate.set_operation_mode
+  - service: climate.turn_off
     data:
       entity_id: climate.lounge_heat_pump
-      operation_mode: 'off'
-#  - service: media_player.media_pause
-#    data:
-#      entity_id: media_player.itunes
   - service: media_player.turn_off
     data:
       entity_id: media_player.lounge_home_theatre
